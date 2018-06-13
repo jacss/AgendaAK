@@ -36,4 +36,18 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:text="Navegador" />
+
+    <Button
+        android:id="@+id/botaoInfor_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Informações sobre o uso do aplicativo" />
+
+    <Button
+        android:id="@+id/botaoComp_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Componentes" />
 </LinearLayout>

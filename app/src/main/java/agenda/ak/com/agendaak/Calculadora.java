@@ -135,14 +135,7 @@ public class Calculadora extends AppCompatActivity {
                 editResultado.setText(editResultado.getText() + ".");
             }
         });
-        botaoSoma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              editResultado.setText("+");
 
-
-            }
-        });
         botaoLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -155,7 +148,6 @@ public class Calculadora extends AppCompatActivity {
                 valor2 = Double.parseDouble(editResultado.getText().toString());
                 if (sinal.equals("soma")) {
                     editResultado.setText(String.valueOf(valor1 + valor2));
-
                 } else if (sinal.equals("subtrair")) {
                     editResultado.setText(String.valueOf(valor1 - valor2));
                 } else if (sinal.equals("multiplica")) {
@@ -177,16 +169,19 @@ public class Calculadora extends AppCompatActivity {
         botaoSoma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 valor1 = Double.parseDouble(editResultado.getText().toString());
-                //limpaCampo();
-                sinal = "soma";
+                limpaCampo();
+                 sinal = "soma";
+
             }
         });
         botaoSubtrair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 valor1 = Double.parseDouble(editResultado.getText().toString());
-               // limpaCampo();
+                limpaCampo();
                 sinal = "subtrair";
             }
         });
@@ -194,7 +189,7 @@ public class Calculadora extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 valor1 = Double.parseDouble(editResultado.getText().toString());
-               //limpaCampo();
+                limpaCampo();
                 sinalMult = "mult";
                 sinal = "multiplica";
             }
@@ -203,7 +198,7 @@ public class Calculadora extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 valor1 = Double.parseDouble(editResultado.getText().toString());
-                //limpaCampo();
+                limpaCampo();
                 sinal = "dividir";
             }
         });

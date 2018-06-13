@@ -1,5 +1,6 @@
 package agenda.ak.com.agendaak;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Contato>listViewContato;
     private ArrayAdapter adapter;
     private Button btnCalculadora;
+    private Button btnNavegador;
+    private Button btnInformacao;
+    private Button btnComponentes;
 
 
     @Override
@@ -31,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnAgenda = findViewById(R.id.btnAgenda_ID);
         btnCalculadora = findViewById(R.id.btnCalculadora_ID);
+        btnNavegador = findViewById(R.id.btnNavegador_ID);
+        btnInformacao = findViewById(R.id.botaoInfor_Id);
+        btnComponentes = findViewById(R.id.botaoComp_Id);
 
 
         btnAgenda.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +52,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent =new Intent(MainActivity.this, Calculadora.class);
                 startActivity(intent);
+            }
+        });
+        btnNavegador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, Navegador.class);
+                startActivity(intent);
+
+            }
+        });
+        btnInformacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, Informacoes.class);
+                startActivity(intent);
+
+            }
+        });
+        btnComponentes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, Componentes.class);
+                startActivity(intent);
+
             }
         });
     }

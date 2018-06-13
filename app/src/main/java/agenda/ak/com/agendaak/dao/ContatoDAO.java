@@ -8,12 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+import agenda.ak.com.agendaak.CadastrarContato;
 import agenda.ak.com.agendaak.model.Contato;
 
 public class ContatoDAO extends SQLiteOpenHelper{
 
     private static final String DATABASE = "bdagenda";
     private static final int VERSION =1;
+    private CadastrarContato contato= new CadastrarContato();
 
     public ContatoDAO(Context context){
         super(context, DATABASE,null,VERSION);
@@ -82,4 +84,5 @@ public class ContatoDAO extends SQLiteOpenHelper{
 
         return contatos;
     }
+
 }
