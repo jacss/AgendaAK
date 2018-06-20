@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnNavegador;
     private Button btnInformacao;
     private Button btnComponentes;
+    private Button btnMap;
 
 
     @Override
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnNavegador = findViewById(R.id.btnNavegador_ID);
         btnInformacao = findViewById(R.id.botaoInfor_Id);
         btnComponentes = findViewById(R.id.botaoComp_Id);
+        btnMap = findViewById(R.id.btnMapa_ID);
 
 
         btnAgenda.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 }

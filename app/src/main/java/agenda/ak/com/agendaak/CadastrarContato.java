@@ -29,7 +29,7 @@ public class CadastrarContato extends AppCompatActivity {
 
         dao = new ContatoDAO(CadastrarContato.this);
         Intent intent = getIntent();
-        editarContato= (Contato) intent.getSerializableExtra("contato-escolhido");
+        editarContato = (Contato) intent.getSerializableExtra("contato-escolhido");
 
         nomeContato = findViewById(R.id.textoNome_ID);
         textoTelefone = findViewById(R.id.textoTelefone_ID);
@@ -37,7 +37,7 @@ public class CadastrarContato extends AppCompatActivity {
 
         btnPolimofismo = findViewById(R.id.btnPolimosfismo_ID);
 
-        if(editarContato!=null){
+        if (editarContato != null) {
             btnPolimofismo.setText("Alterar Cadastro");
 
             nomeContato.setText(editarContato.getNomeContato());
@@ -45,10 +45,10 @@ public class CadastrarContato extends AppCompatActivity {
             textoEmail.setText(editarContato.getEmailContato());
 
             contato.setId(editarContato.getId());
-        }else {
+        } else {
             btnPolimofismo.setText("Novo Contato");
-        }
 
+        }
         btnPolimofismo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,14 +56,16 @@ public class CadastrarContato extends AppCompatActivity {
                 contato.setTeleContato(textoTelefone.getText().toString());
                 contato.setEmailContato(textoEmail.getText().toString());
 
-                if(btnPolimofismo.getText().toString().equals("Novo Contato")){
+                if (btnPolimofismo.getText().toString().equals("Novo Contato")) {
 
-                        dao.salvarContato(contato);
-                        Toast.makeText(CadastrarContato.this,"Registro salvo com sucesso!!", Toast.LENGTH_SHORT).show();
-                        dao.close();
-                }else{
+                    dao.salvarContato(contato);
+                    Toast.makeText(CadastrarContato.this, "Registro salvo com sucesso!!", Toast.LENGTH_SHORT).show();
+                    dao.close();
+
+
+                } else {
                     dao.alterarContato(contato);
-                    Toast.makeText(CadastrarContato.this,"Registro alterado com sucesso!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CadastrarContato.this, "Registro alterado com sucesso!!", Toast.LENGTH_SHORT).show();
 
                     dao.close();
                 }
@@ -73,6 +75,7 @@ public class CadastrarContato extends AppCompatActivity {
         });
 
     }
+
     public boolean validaCampos() {
         if (nomeContato.getText().equals("")) {
             Toast.makeText(CadastrarContato.this, "Caralho!!", Toast.LENGTH_SHORT).show();
