@@ -57,11 +57,13 @@ public class CadastrarContato extends AppCompatActivity {
                 contato.setEmailContato(textoEmail.getText().toString());
 
                 if (btnPolimofismo.getText().toString().equals("Novo Contato")) {
-
-                    dao.salvarContato(contato);
-                    Toast.makeText(CadastrarContato.this, "Registro salvo com sucesso!!", Toast.LENGTH_SHORT).show();
-                    dao.close();
-
+                    if (nomeContato.getText().toString().equals("") || textoTelefone.getText().toString().equals("") || textoEmail.getText().toString().equals("")) {
+                        Toast.makeText(CadastrarContato.this, "Favor preencher os campos!!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        dao.salvarContato(contato);
+                        Toast.makeText(CadastrarContato.this, "Registro salvo com sucesso!!", Toast.LENGTH_SHORT).show();
+                        dao.close();
+                    }
 
                 } else {
                     dao.alterarContato(contato);
@@ -74,14 +76,7 @@ public class CadastrarContato extends AppCompatActivity {
             }
         });
 
-    }
 
-    public boolean validaCampos() {
-        if (nomeContato.getText().equals("")) {
-            Toast.makeText(CadastrarContato.this, "Caralho!!", Toast.LENGTH_SHORT).show();
-
-        }
-        return false;
     }
 
 

@@ -88,4 +88,5 @@ public class ContatoDAO extends SQLiteOpenHelper {
         return contatos;
     }
 
+
 }
