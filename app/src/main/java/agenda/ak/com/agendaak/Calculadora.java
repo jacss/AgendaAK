@@ -173,7 +173,7 @@ public class Calculadora extends AppCompatActivity {
 
                 valor1 = Double.parseDouble(editResultado.getText().toString());
                 limpaCampo();
-                 sinal = "soma";
+                sinal = "soma";
 
             }
         });

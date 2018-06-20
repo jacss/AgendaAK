@@ -98,7 +98,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private boolean hasPermission(String permission) {
         if (canAskPermission()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 return (checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
             }
         }
@@ -155,7 +155,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // checa permições
 
             // verifica as permissões para versões posteriores
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 if (permissionsToRequest.size() > 0) {
                     requestPermissions(permissionsToRequest.toArray(new String[permissionsToRequest.size()]),
                             ALL_PERMISSIONS_RESULT);

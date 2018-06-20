@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Contato contato = new Contato();
     private ContatoDAO dao;
-    private ArrayList<Contato>listViewContato;
+    private ArrayList<Contato> listViewContato;
     private ArrayAdapter adapter;
     private Button btnCalculadora;
     private Button btnNavegador;
@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
         btnCalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this, Calculadora.class);
+                Intent intent = new Intent(MainActivity.this, Calculadora.class);
                 startActivity(intent);
             }
         });
         btnNavegador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this, Navegador.class);
+                Intent intent = new Intent(MainActivity.this, Navegador.class);
                 startActivity(intent);
 
             }
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btnInformacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this, Informacoes.class);
+                Intent intent = new Intent(MainActivity.this, Informacoes.class);
                 startActivity(intent);
 
             }
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         btnComponentes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this, Componentes.class);
+                Intent intent = new Intent(MainActivity.this, Componentes.class);
                 startActivity(intent);
 
             }
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this, MapsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
 
             }

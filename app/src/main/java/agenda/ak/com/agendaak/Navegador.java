@@ -19,9 +19,8 @@ public class Navegador extends AppCompatActivity {
         setContentView(R.layout.activity_navegador);
 
         botaoGo = findViewById(R.id.botaoGo_Id);
-        editTextNavegador=findViewById(R.id.editTextNavegador_Id);
-        webView =findViewById(R.id.webView_Id);
-
+        editTextNavegador = findViewById(R.id.editTextNavegador_Id);
+        webView = findViewById(R.id.webView_Id);
 
 
         webView.getSettings().setJavaScriptEnabled(true);
@@ -31,7 +30,7 @@ public class Navegador extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                webView.loadUrl("https://"+editTextNavegador.getText().toString());
+                webView.loadUrl("https://" + editTextNavegador.getText().toString());
                 editTextNavegador.setText("");
             }
         });
