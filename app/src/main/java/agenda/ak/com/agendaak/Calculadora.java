@@ -27,6 +27,7 @@ public class Calculadora extends AppCompatActivity {
     private Button botaoMultiplicar;
     private Button botaoDividir;
     private Button botaoPorcentagem;
+    private Button botaoLimpaVariavel;
     private double valor1;
     private double valor2;
     private String sinal;
@@ -59,6 +60,7 @@ public class Calculadora extends AppCompatActivity {
         botaoDividir = findViewById(R.id.botaoDividir_Id);
         botaoPorcentagem = findViewById(R.id.botaoPorcentagem_Id);
         botaoPonto = findViewById(R.id.botaoPonto_Id);
+        botaoLimpaVariavel = findViewById(R.id.btnLimparVaria_Id);
 
 
         botaoZero.setOnClickListener(new View.OnClickListener() {
@@ -206,7 +208,6 @@ public class Calculadora extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 if (sinalMult.equals("mult")) {
 
                     valor2 = Double.parseDouble(editResultado.getText().toString());
@@ -216,6 +217,12 @@ public class Calculadora extends AppCompatActivity {
                 }
             }
         });
+        botaoLimpaVariavel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editResultado.setText("");
+            }
+        });
 
     }
 
@@ -223,4 +230,5 @@ public class Calculadora extends AppCompatActivity {
 
         editResultado.setText("");
     }
+
 }

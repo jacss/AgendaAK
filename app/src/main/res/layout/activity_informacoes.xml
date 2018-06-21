@@ -15,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="72dp"
-        android:text='Para deletar um contato, basta mante-lo pressionado, seguida aparecerá uma mensagem "Deletar Contato".' />
+        android:text='Para deletar um contato, basta mante-lo pressionado, em  seguida aparecerá uma mensagem "Deletar Contato".' />
 
     <TextView
         android:id="@+id/textView3"

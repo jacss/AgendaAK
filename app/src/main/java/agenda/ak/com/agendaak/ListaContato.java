@@ -53,6 +53,7 @@ public class ListaContato extends AppCompatActivity {
         listaView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
+                //seleciona o contato na listview
                 Contato contatoEscolhido = (Contato) adapter.getItemAtPosition(i);
                 Intent intent = new Intent(ListaContato.this, CadastrarContato.class);
                 intent.putExtra("contato-escolhido", contatoEscolhido);
@@ -63,6 +64,7 @@ public class ListaContato extends AppCompatActivity {
     }
 
     @Override
+    //método que seleciona o contato par ser deletado
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuItem menuDelete = menu.add("Deletar este contato!!");
         menuDelete.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -81,7 +83,7 @@ public class ListaContato extends AppCompatActivity {
         super.onResume();
         carregarContato();
     }
-
+        //método que atualiza os contatos na listview
     public void carregarContato() {
         dao = new ContatoDAO(ListaContato.this);
         listViewContato = dao.getLista();

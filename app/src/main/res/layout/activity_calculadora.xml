@@ -14,7 +14,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp">
-
         <EditText
             android:id="@+id/editResultado_Id"
             android:layout_width="match_parent"
@@ -49,7 +48,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnLimparVaria_Id"
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginLeft="3dp"
