@@ -49,6 +49,7 @@ public class CadastrarContato extends AppCompatActivity {
             btnPolimofismo.setText("Novo Contato");
 
         }
+        //configuração do botão para salvar ou alterar
         btnPolimofismo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
